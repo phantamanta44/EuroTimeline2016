@@ -1,1 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    margin-bottom: 16px;
+}
 
+a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: #212121;
+}
+
+.center-box {
+    display: flex;
+    align-items: center;
+}
+
+/* HEADER */
+
+#header {
+    margin-bottom: 8px;
+}
+
+/* BODY */
+
+#strand-header {
+    position: relative;
+    z-index: 4;
+    box-shadow: 0 3px 18px -7px #424242;
+}
+
+#strand-header > div > h3 {
+    margin: 18px 0;
+    padding-left: 15px;
+    color: #F4F4F4;
+}
+
+#strands {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px -4px #424242;
+}
+
+#strand-header-pol {
+    background-color: #F44336;
+}
+
+#strand-header-econ {
+    background-color: #2195F3;
+}
+
+#strand-header-cult {
+    background-color: #4CAF50;
+}
+
+#strand-pol, #strand-econ, #strand-cult {
+    position: relative;
+    height: 4000px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#strand-pol {
+    background-color: #FFCDD2;
+}
+
+#strand-econ {
+    background-color: #BBDEFB;
+}
+
+#strand-cult {
+    background-color: #C8E6C9;
+}
+
+.strand-event {
+    position: absolute;
+    width: 100%;
+    padding: 3px 15px;
+    transition: background-color 0.8s;
+}
+
+.strand-event > .panel-collapse > .panel-body {
+    border: none !important;
+    padding-top: 0;
+}
+
+#strand-pol .strand-event {
+    background-color: #EF9A9A;
+}
+    
+#strand-econ .strand-event {
+    background-color: #90CAF9;
+}
+
+#strand-cult .strand-event {
+    background-color: #A5D6A7;
+}
+
+#strand-pol .strand-event:hover {
+    background-color: #FF9AAB;
+}
+    
+#strand-econ .strand-event:hover {
+    background-color: #81D4FA;
+}
+
+#strand-cult .strand-event:hover {
+    background-color: #AED581;
+}
+
+.ec-button {
+    font-size: 32px;
+    color: #212121;
+}
+
+.event-desc {
+    margin: 0;
+}
+
+/* FOOTER */
+
+#gh-link a, #gh-link a:active, #gh-link a:visited {
+    color: #212121;
+    transition: color 0.4s;
+    text-decoration: none;
+}
+
+#gh-link a:hover {
+    color: #039BE5;
+}
