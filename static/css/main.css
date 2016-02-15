@@ -108,6 +108,11 @@ a, a:hover, a:active, a:visited {
     background-color: #AED581;
 }
 
+.theme-icon {
+    font-size: 21px;
+    color: #424242;
+}
+
 .ec-button {
     font-size: 32px;
     color: #212121;
