@@ -22,10 +22,17 @@ a, a:hover, a:active, a:visited {
 
 /* BODY */
 
+#strand-container {
+    padding: 0 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 28px -8px #212121;
+    border: solid 1px #D3D3D3;
+}
+
 #strand-header {
     position: relative;
     z-index: 4;
-    box-shadow: 0 3px 18px -7px #424242;
+    box-shadow: 0 2px 7px 2px #969696;
 }
 
 #strand-header > div > h3 {
@@ -37,7 +44,6 @@ a, a:hover, a:active, a:visited {
 #strands {
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
     box-shadow: 0 3px 12px -4px #424242;
 }
 
