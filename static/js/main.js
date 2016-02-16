@@ -9,7 +9,7 @@ $(document).ready(function() {
                     if (obj.parent().attr('aria-expanded') === 'true') {
                         obj.removeClass('mdi-plus');
                         obj.addClass('mdi-minus');
-                        ppppDiv.css('z-index', '1984');
+                        ppppDiv.css('z-index', '8000');
                     } else {
                         obj.removeClass('mdi-minus');
                         obj.addClass('mdi-plus');
@@ -24,10 +24,9 @@ $(document).ready(function() {
         return n > lower && n < upper;
     };
     
-    var themes = [
-        {name: 'Religious Reformation', icon: 'mdi-church'},
-        {name: 'Government Centralization', icon: 'mdi-bank'}   
-    ];
+    var gYearS, gYearL, gYearE;
+    
+    var themes;
     
     var events = {
         pol: [],
@@ -91,8 +90,8 @@ $(document).ready(function() {
         event.append(heading);
         event.append(bodyWrapper);
         
-        var yearHeight = $('#strand-' + strand).height() / 400;
-        var yVal = yearHeight * (y1 - 1500);
+        var yearHeight = $('#strand-' + strand).height() / gYearL;
+        var yVal = yearHeight * (y1 - gYearS);
         $.each(events[strand], function(i, oe) {
             var eh = oe.innerHeight();
             var oy = oe.position().top;
@@ -101,8 +100,8 @@ $(document).ready(function() {
         });
         
         event.css('top', yVal + 'px');
-        event.css('z-index', 1517 - id);
-        event.attr('data-zind', 1517 - id);
+        event.css('z-index', 4000 - id);
+        event.attr('data-zind', 4000 - id);
         events[strand].push(event);
         
         return event;
@@ -116,12 +115,25 @@ $(document).ready(function() {
     };
     
     var procEvents = function(data, status, req) {
-        procStrand('pol', data.pol);
-        procStrand('econ', data.econ);
-        procStrand('cult', data.cult);
+        document.title = data.name;
+        var tlTitle = $('#timeline-title');
+        tlTitle.text(data.name + ' ');
+        var tlSubtitle = $('<small>');
+        tlSubtitle.text(data.subtitle);
+        tlTitle.append(tlSubtitle);
+        gYearS = data.startYear;
+        gYearL = data.endYear - data.startYear;
+        gYearE = data.endYear;
+        themes = data.themes;
+        procStrand('pol', data.strands.pol);
+        procStrand('econ', data.strands.econ);
+        procStrand('cult', data.strands.cult);
         setupCollapse();
     };
     
-    $.getJSON('static/json/events.json').done(procEvents);
+    if (!document.location.search)
+        $.getJSON('static/json/events.json').done(procEvents);
+    else
+        $.getJSON(document.location.search.substring(1)).done(procEvents);
     
 });
