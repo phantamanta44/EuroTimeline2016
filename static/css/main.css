@@ -25,14 +25,13 @@ a, a:hover, a:active, a:visited {
 #strand-container {
     padding: 0 15px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 28px -8px #212121;
-    border: solid 1px #D3D3D3;
+    box-shadow: 0 2px 16px 0 #323232;
 }
 
 #strand-header {
     position: relative;
     z-index: 4;
-    box-shadow: 0 2px 7px 2px #969696;
+    box-shadow: 0 2px 7px 2px #6A6A6A;
 }
 
 #strand-header > div > h3 {
@@ -82,6 +81,7 @@ a, a:hover, a:active, a:visited {
     position: absolute;
     width: 100%;
     padding: 3px 15px;
+    margin-top: 0 !important;
     transition: background-color 0.8s;
 }
 
@@ -122,6 +122,11 @@ a, a:hover, a:active, a:visited {
 .ec-button {
     font-size: 32px;
     color: #212121;
+    transition: transform 0.6s;
+}
+
+a[aria-expanded=true] > .ec-button {
+    transform: rotateZ(180deg);
 }
 
 .event-desc {

@@ -9,7 +9,7 @@ $(document).ready(function() {
                     if (obj.parent().attr('aria-expanded') === 'true') {
                         obj.removeClass('mdi-plus');
                         obj.addClass('mdi-minus');
-                        ppppDiv.css('z-index', '8000');
+                        ppppDiv.css('z-index', 8000);
                     } else {
                         obj.removeClass('mdi-minus');
                         obj.addClass('mdi-plus');
@@ -17,6 +17,15 @@ $(document).ready(function() {
                     }
                 });
             }, 1);
+        });
+        $('.strand-event').hover(function() {
+            $('.strand-event').each(function(i, element) {
+                var obj = $(element);
+                if (obj.has('.tooltip'))
+                    obj.css('z-index', 8001);
+                else
+                    obj.css('z-index', obj.attr('data-zind'));
+            });
         });
     };
     
@@ -102,6 +111,7 @@ $(document).ready(function() {
         event.css('top', yVal + 'px');
         event.css('z-index', 4000 - id);
         event.attr('data-zind', 4000 - id);
+        event.addClass('event-theme-' + themeId);
         events[strand].push(event);
         
         return event;
@@ -109,6 +119,9 @@ $(document).ready(function() {
     
     var procStrand = function(sName, eList) {
         var sDiv = $('#strand-' + sName);
+        eList.sort(function(a, b) {
+            return a.sYear - b.sYear;
+        });
         $.each(eList, function(i, obj) {
             sDiv.append(genEvent(sName, obj.name, obj.sYear, obj.eYear, obj.desc, obj.theme));
         });
