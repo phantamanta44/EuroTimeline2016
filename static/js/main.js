@@ -18,15 +18,20 @@ $(document).ready(function() {
                 });
             }, 1);
         });
-        $('.strand-event').hover(function() {
+        var themeUpdateFunc = function() {
             $('.strand-event').each(function(i, element) {
-                var obj = $(element);
-                if (obj.has('.tooltip'))
-                    obj.css('z-index', 8001);
-                else
-                    obj.css('z-index', obj.attr('data-zind'));
+                setTimeout(function() {
+                    var obj = $(element);
+                    if (obj.has('div.tooltip').size() > 0)
+                        obj.css('z-index', 8001);
+                    else
+                        obj.css('z-index', obj.attr('data-zind'));
+                }, 16);
             });
-        });
+        };
+        var eventJqs = $('.strand-event');
+        eventJqs.mousemove(themeUpdateFunc);
+        eventJqs.mouseleave(themeUpdateFunc);
     };
     
     var inBounds = function(n, lower, upper) {

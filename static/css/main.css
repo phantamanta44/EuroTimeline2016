@@ -81,7 +81,7 @@ a, a:hover, a:active, a:visited {
     position: absolute;
     width: 100%;
     padding: 3px 15px;
-    margin-top: 0 !important;
+    box-shadow: 0 3px 8px -4px #646464;
     transition: background-color 0.8s;
 }
 
