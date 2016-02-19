@@ -107,16 +107,9 @@ $(document).ready(function() {
         $.each(events[strand], function(i, oe) {
             var eh = oe.outerHeight(true);
             var oy = oe.position().top;
-            if (strand === 'cult') {
-            console.log(yVal);
-            console.log(oy);
-            console.log(oy + eh);
-            }
             if (inBounds(yVal, oy, oy + eh))
                 yVal = oy + eh;
         });
-        console.log(yVal);
-        console.log('-');
         event.css('top', yVal + 'px');
         event.css('z-index', 4000 - id);
         event.attr('data-zind', 4000 - id);

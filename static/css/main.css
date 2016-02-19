@@ -128,12 +128,12 @@ a, a:hover, a:active, a:visited {
 
 /* FOOTER */
 
-#gh-link a, #gh-link a:active, #gh-link a:visited {
+#gh-link a, #gh-link a:active, #gh-link a:visited, #copyright a, #copyright a:active, #copyright a:visited {
     color: #212121;
     transition: color 0.4s;
     text-decoration: none;
 }
 
-#gh-link a:hover {
+#gh-link a:hover, #copyright a:hover {
     color: #039BE5;
 }

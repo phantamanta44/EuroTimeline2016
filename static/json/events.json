@@ -2,44 +2,159 @@
     "name": "Euro Timeline 2016",
     "subtitle": "Sixteenth to Twentieth Century",
     "startYear": 1500,
-    "endYear": 1900,
+    "endYear": 1920,
     "tlHeight": 4096,
     "themes": {
         "pro": {"name": "Religious Reformation", "icon": "mdi-church"},
         "gov": {"name": "Government Centralization", "icon": "mdi-bank"},
-        "rat": {"name": "Rational Thought", "icon": "mdi-flask"},
-        "ind": {"name": "Industrialization", "icon": "mdi-factory"},
-        "nat": {"name": "Nationalism", "icon": "mdi-flag-variant"},
+        "rat": {"name": "Rational Thought", "icon": "mdi-school"},
+        "eco": {"name": "Economic Development", "icon": "mdi-cash-multiple"},
         "lib": {"name": "Radical Liberal Action", "icon": "mdi-fire"},
-        "con": {"name": "Conservative Reaction", "icon": "mdi-undo-variant"}
+        "con": {"name": "Conservative Reaction", "icon": "mdi-shield"}
     },
     "strands": {
         "pol": [
+            {
+                "name": "Sack of Rome", "sYear": 1527, "theme": "con",
+                "desc": "Rome is seiged by the troops of Charles V, putting an abrupt end to the Italian Renaissance."
+            },
             {
                 "name": "Peace of Augsburg", "sYear": 1555, "theme": "pro",
                 "desc": "Charles V ends the war against the Schmalkaldic League and legalizes the practice of Protestantism (specifically Lutheranism) in the Holy Roman Empire."
             },
             {
-                "name": "Edict of Nantes", "sYear": 1598, "theme": "pro",
-                "desc": "Established legal religious toleration of Calvanists in France under King Henry IV."
+                "name": "Spanish Armada", "sYear": 1588, "theme": "gov",
+                "desc": "The Spanish Armada attempts to mount a naval offensive against Britain, and suffers a decisive defeat as a result."
             },
             {
-                "name": "30 Years' War", "sYear": 1618, "eYear": 1648, "theme": "pro",
+                "name": "30 Years' War", "sYear": 1618, "eYear": 1648, "theme": "con",
                 "desc": "An elongated armed conflict between the Catholic church and the various Protestant denominations across Europe."
             },
             {
-                "name": "Rump Parliament", "sYear": 1649, "theme": "pro",
-                "desc": "Richard Cromwell forcibly dissolves the Rump Parliament and establishes the English Commonwealth, which lasts until 1660"
+                "name": "Treaty of Westphalia", "sYear": 1648, "theme": "pro",
+                "desc": "Ended the 30 Years' War and provided for religious tolerance of Protestants."
+            },
+            {
+                "name": "English Civil War", "sYear": 1642, "eYear": 1651, "theme": "lib",
+                "desc": "England enters a period of civil war, ending with the English Commonwealth under Oliver Cromwell."
+            },
+            {
+                "name": "Rump Parliament", "sYear": 1649, "theme": "lib",
+                "desc": "Cromwell forcibly dissolves the Rump Parliament and establishes the English Commonwealth, which lasts until 1660"
             },
             {
                 "name": "Glorious Revolution", "sYear": 1688, "theme": "pro",
                 "desc": "King James II of England, after being suspected of harboring Catholic sympathies, is peacefully replaced with William III of Orange-Nassau."
+            },
+            {
+                "name": "War of Spanish Succession", "sYear": 1701, "eYear": 1714, "theme": "gov",
+                "desc": "Various European nations fight over the succession of the Spanish throne. Technically, the Habsburgs have the legal right to the throne, but nobody wants a powerful Habsburg state in the middle of their affairs."
+            },
+            {
+                "name": "Pragmatic Sanction", "sYear": 1713, "theme": "gov",
+                "desc": "Charles VI of the Holy Roman Empire issues the Pragmatic Sanction, which gave his entire inheritance to his daughter, Maria Theresa."
+            },
+            {
+                "name": "Treaty of Utrecht", "sYear": 1713, "theme": "gov",
+                "desc": "Ended the War of Spanish Succession by splitting the German and Spanish Habsburg empires."
+            },
+            {
+                "name": "Seven Years' War", "sYear": 1754, "eYear": 1763, "theme": "eco",
+                "desc": "A war between the major powers of Europe over economical affairs."
+            },
+            {
+                "name": "Diplomatic Revolution", "sYear": 1756, "theme": "gov",
+                "desc": "Rearranged German alliances between France and Britain."
+            },
+            {
+                "name": "Treaty of Paris", "sYear": 1763, "theme": "eco",
+                "desc": "Ends the Seven Years' War and marks the beginning of Britain's global dominance."
+            },
+            {
+                "name": "Tennis Court Oath", "sYear": 1789, "theme": "lib",
+                "desc": "The third estate takes the Tennis Court Oath in a nearby tennis court after being thrown out of the Estates-General. This oath marks the beginning of the French Revolution."
+            },
+            {
+                "name": "Coup of 18 Brumaire", "sYear": 1799, "theme": "lib",
+                "desc": "Napoleon Bonaparte overthrows the Directory and takes power as the First Consul to France, ending the French Revolution."
+            },
+            {
+                "name": "Napoleonic Defeat", "sYear": 1814, "theme": "con",
+                "desc": "Napoleon abdicates in the face of total defeat after the Allies sign the Treaty of Chaumont."
+            },
+            {
+                "name": "Congress of Vienna", "sYear": 1814, "eYear": 1815, "theme": "con",
+                "desc": "Congress held in Vienna with the goal of restoring Europe to a state from before the French Revolution."
+            },
+            {
+                "name": "Defeat at Waterloo", "sYear": 1815, "theme": "con",
+                "desc": "Napoleon is defeated at Waterloo after the 100 days, and is exiled to the island of Saint Helena."
+            },
+            {
+                "name": "Peterloo Massacre", "sYear": 1819, "theme": "lib",
+                "desc": "The Manchester Patriotic Union organizes a public demonstration to gain support for their liberal agenda. The British military attempts to control the crowd, killing a number of people in the ensuing chaos."
+            },
+            {
+                "name": "Decembrist Revolt", "sYear": 1825, "theme": "lib",
+                "desc": "Radical Russian military officiers refuse to swear allegiance to Tsar Nicholas I, and are subsequently crushed by the Tsar."
+            },
+            {
+                "name": "Louis Napoleon", "sYear": 1852, "theme": "lib",
+                "desc": "Louis Napoleon takes the French throne as the first President of France."
+            },
+            {
+                "name": "Crimean War", "sYear": 1853, "eYear": 1856, "theme": "gov",
+                "desc": "Russia attempts to take land from the Ottoman Empire, and the rest of Europe intervenes, resulting in a devastating loss for Russia."
+            },
+            {
+                "name": "Seven Weeks' War", "sYear": 1866, "theme": "gov",
+                "desc": "Otto Von Bismarck provokes a war between Prussia and Austria in the interest of capturing key German territories."
+            },
+            {
+                "name": "Dreyfus Affair", "sYear": 1894, "eYear": 1906, "theme": "gov",
+                "desc": "A French military officier is falsely accused of handing off secrets to Germany, and the French government blunders while trying to cover it up."
             }
         ],
         "econ": [
             {
                 "name": "Peasants' Revolt", "sYear": 1524, "eYear": 1525, "theme": "lib",
                 "desc": "The German peasantry revolt in light of the percieved support from the Lutheran church."
+            },
+            {
+                "name": "Leviathan", "sYear": 1651, "theme": "rat",
+                "desc": "Thomas Hobbes publishes his treatise on the nature of the governed through social contract theory."
+            },
+            {
+                "name": "Two Treatises", "sYear": 1689, "theme": "rat",
+                "desc": "John Locke publishes his take on social contract theory."
+            },
+            {
+                "name": "War of Jenkins' Ear", "sYear": 1739, "eYear": 1748, "theme": "eco",
+                "desc": "Anglo-Spanish war over economic power in America."
+            },
+            {
+                "name": "Social Contract", "sYear": 1762, "theme": "rat",
+                "desc": "Rousseau publishes yet another interpretation of the social contract theory."
+            },
+            {
+                "name": "American Revolution", "sYear": 1775, "eYear": 1783, "theme": "lib",
+                "desc": "The Americans decide to revolt against Britain. France supports the Americans, creating heavy economical strain."
+            },
+            {
+                "name": "Wealth of Nations", "sYear": 1776, "theme": "eco",
+                "desc": "Adam Smith publishes his works on capitalism and the benefits of a competition-driven economy."
+            },
+            {
+                "name": "Factory Act", "sYear": 1833, "theme": "eco",
+                "desc": "The Factory Act is passed, imposing limits upon child labour in factories."
+            },
+            {
+                "name": "Repeal of Corn Laws", "sYear": 1845, "theme": "eco",
+                "desc": "The English Corn Laws are repealed in the light of the Irish potato famine."
+            },
+            {
+                "name": "Communist Manifesto", "sYear": 1848, "theme": "eco",
+                "desc": "Karl Marx and Friedrich Engels publish the Communist Manifesto, drawing from the works of utopian socialists and capitalists."
             }
         ],
         "cult": [
@@ -56,6 +171,10 @@
                 "desc": "King Henry VIII of England declares himself the sole head of the English Anglican church."
             },
             {
+                "name": "On The Revolutions...", "sYear": 1543, "theme": "rat",
+                "desc": "Nicolaus Copernicus publishes \"On the Revolutions of the Heavenly Spheres\", marking the beginning of the Scientific Revolution."
+            },
+            {
                 "name": "Council of Trent", "sYear": 1545, "eYear": 1563, "theme": "con",
                 "desc": "The Catholic Church organizes a council to condemn Protestantism and reform the church structure."
             },
@@ -64,8 +183,56 @@
                 "desc": "Extensive bloody conflict in France that resulted in the death of many Huguenot leaders, marking a turning point in the French wars of religion."
             },
             {
-                "name": "", "sYear": 1800, "eYear": 1801, "theme": "pro",
-                "desc": ""
+                "name": "Edict of Nantes", "sYear": 1598, "theme": "pro",
+                "desc": "Established legal religious toleration of Calvanists in France under King Henry IV."
+            },
+            {
+                "name": "Astronomia Nova", "sYear": 1609, "theme": "rat",
+                "desc": "Kepler (unhappily) publishes his findings after studying the motions of the heavens."
+            },
+            {
+                "name": "Novum Organum", "sYear": 1620, "theme": "rat",
+                "desc": "Francis Bacon publishes \"Novum Organum\", which outlines his system of empirical observation in the context of science."
+            },
+            {
+                "name": "Galileo Condemned", "sYear": 1633, "theme": "con",
+                "desc": "Galileo is accused of heresy and sentenced to house arrest until his death."
+            },
+            {
+                "name": "Discourse on Method", "sYear": 1637, "theme": "rat",
+                "desc": "Rene Descartes publishes his work on the deductive system of thought, advocating for a scientific method formed purely of conjecture and reasoning"
+            },
+            {
+                "name": "Edict of Fontainebleau", "sYear": 1685, "theme": "con",
+                "desc": "Revoked the Edict of Nantes and sparked a strong liberal reaction."
+            },
+            {
+                "name": "Principia Mathematica", "sYear": 1687, "theme": "rat",
+                "desc": "Newton publishes his work on the laws of physics."
+            },
+            {
+                "name": "Spirit of the Laws", "sYear": 1748, "theme": "rat",
+                "desc": "Montesquieu publishes his works detailing a system of balanced government."
+            },
+            {
+                "name": "Encyclopedia", "sYear": 1751, "theme": "rat",
+                "desc": "Diderot publishes the Encyclopedia, an attempt at cataloguing all human knowledge in one set of books."
+            },
+            {
+                "name": "Emile", "sYear": 1762, "theme": "rat",
+                "desc": "Rousseau publishes \"Emiel\", a treatise advocating the view of men being superior to women."
+            },
+            {
+                "name": "Crime and Punishment", "sYear": 1764, "theme": "rat",
+                "desc": "Beccaria publishes his theories on the effective execution of punishment within the boundaries of morality."
+            },
+            {
+                "name": "Vindication of Rights", "sYear": 1792, "theme": "rat",
+                "desc": "Wollstonecraft publishes her theories on the position of women in society being equal to that of men."
+            },
+            {
+                "name": "Education Act", "sYear": 1869, "theme": "rat",
+                "desc": "British education is taken out of the hands of the Church."
             }
         ]
     }
