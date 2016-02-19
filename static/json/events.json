@@ -3,41 +3,69 @@
     "subtitle": "Sixteenth to Twentieth Century",
     "startYear": 1500,
     "endYear": 1900,
+    "tlHeight": 4096,
     "themes": {
-        "prot": {"name": "Religious Reformation", "icon": "mdi-church"},
-        "govcent": {"name": "Government Centralization", "icon": "mdi-bank"}
+        "pro": {"name": "Religious Reformation", "icon": "mdi-church"},
+        "gov": {"name": "Government Centralization", "icon": "mdi-bank"},
+        "rat": {"name": "Rational Thought", "icon": "mdi-flask"},
+        "ind": {"name": "Industrialization", "icon": "mdi-factory"},
+        "nat": {"name": "Nationalism", "icon": "mdi-flag-variant"},
+        "lib": {"name": "Radical Liberal Action", "icon": "mdi-fire"},
+        "con": {"name": "Conservative Reaction", "icon": "mdi-undo-variant"}
     },
     "strands": {
         "pol": [
             {
-                "name": "Two Years",
-                "sYear": "1616",
-                "eYear": "1618",
-                "desc": "This period marks the first occurrence, in history, of the years 1616 through 1618.",
-                "theme": "govcent"
+                "name": "Peace of Augsburg", "sYear": 1555, "theme": "pro",
+                "desc": "Charles V ends the war against the Schmalkaldic League and legalizes the practice of Protestantism (specifically Lutheranism) in the Holy Roman Empire."
+            },
+            {
+                "name": "Edict of Nantes", "sYear": 1598, "theme": "pro",
+                "desc": "Established legal religious toleration of Calvanists in France under King Henry IV."
+            },
+            {
+                "name": "30 Years' War", "sYear": 1618, "eYear": 1648, "theme": "pro",
+                "desc": "An elongated armed conflict between the Catholic church and the various Protestant denominations across Europe."
+            },
+            {
+                "name": "Rump Parliament", "sYear": 1649, "theme": "pro",
+                "desc": "Richard Cromwell forcibly dissolves the Rump Parliament and establishes the English Commonwealth, which lasts until 1660"
+            },
+            {
+                "name": "Glorious Revolution", "sYear": 1688, "theme": "pro",
+                "desc": "King James II of England, after being suspected of harboring Catholic sympathies, is peacefully replaced with William III of Orange-Nassau."
             }
         ],
         "econ": [
             {
-                "name": "Deep Blue Beats Kasparov",
-                "sYear": "1720",
-                "eYear": "1721",
-                "desc": "IBM supercomputer Deep Blue beats Gary Kasparov, the current holder of the title of worlds' best chess player.",
-                "theme": "prot"
+                "name": "Peasants' Revolt", "sYear": 1524, "eYear": 1525, "theme": "lib",
+                "desc": "The German peasantry revolt in light of the percieved support from the Lutheran church."
             }
         ],
         "cult": [
             {
-                "name": "95 Theses",
-                "sYear": "1517",
-                "desc": "Martin Luther posts his 95 Theses against the sale of indulgences on the door of the Wittenburg Castle Church. The theses are widely distributed by intellectuals, eventually forming the base of the Protestant reformation.",
-                "theme": "prot"
+                "name": "95 Theses", "sYear": 1517, "theme": "pro",
+                "desc": "Martin Luther posts his 95 Theses against the Catholic Chruch's sale of indulgences on the door of the Wittenburg Castle Church."
             },
             {
-                "name": "Mikey Way Born",
-                "sYear": "1519",
-                "desc": "Gerard Way is born on the seventh of may.",
-                "theme": "govcent"
+                "name": "Diet of Worms", "sYear": 1521, "theme": "con",
+                "desc": "The Holy Roman Empire tells Martin Luther to retract his views or face the consequences."
+            },
+            {
+                "name": "Act of Supremacy", "sYear": 1534, "theme": "pro",
+                "desc": "King Henry VIII of England declares himself the sole head of the English Anglican church."
+            },
+            {
+                "name": "Council of Trent", "sYear": 1545, "eYear": 1563, "theme": "con",
+                "desc": "The Catholic Church organizes a council to condemn Protestantism and reform the church structure."
+            },
+            {
+                "name": "Saint Bartholomew's Day Massacre", "sYear": 1572, "theme": "con",
+                "desc": "Extensive bloody conflict in France that resulted in the death of many Huguenot leaders, marking a turning point in the French wars of religion."
+            },
+            {
+                "name": "", "sYear": 1800, "eYear": 1801, "theme": "pro",
+                "desc": ""
             }
         ]
     }

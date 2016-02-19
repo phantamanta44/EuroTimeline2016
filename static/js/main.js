@@ -1,18 +1,16 @@
 $(document).ready(function() {
     
     var setupCollapse = function() {
-        $('.ec-button').click(function() {
+        $('.ec-button').parent().click(function() {
             setTimeout(function() {
                 $('.ec-button').each(function(i, element) {
                     var obj = $(element);
                     var ppppDiv = obj.parent().parent().parent().parent();
                     if (obj.parent().attr('aria-expanded') === 'true') {
-                        obj.removeClass('mdi-plus');
-                        obj.addClass('mdi-minus');
+                        transformicons.transform(element);
                         ppppDiv.css('z-index', 8000);
                     } else {
-                        obj.removeClass('mdi-minus');
-                        obj.addClass('mdi-plus');
+                        transformicons.revert(element);
                         ppppDiv.css('z-index', ppppDiv.attr('data-zind'));
                     }
                 });
@@ -35,7 +33,7 @@ $(document).ready(function() {
     };
     
     var inBounds = function(n, lower, upper) {
-        return n > lower && n < upper;
+        return n >= lower && n < upper;
     };
     
     var gYearS, gYearL, gYearE;
@@ -87,7 +85,7 @@ $(document).ready(function() {
             'data-parent': '#strand-' + strand,
             'href': '#panel-event-' + id
         });
-        var collapseIcon = $('<i>', {class: 'mdi mdi-plus ec-button'});
+        var collapseIcon = $('<button>', {type: 'button', class: 'tcon tcon-plus tcon-plus--minus ec-button', 'aria-label': 'add item'});
         collapseLink.append(collapseIcon);
         collapseBtnDiv.append(collapseLink);
         heading.append(collapseBtnDiv);
@@ -107,12 +105,18 @@ $(document).ready(function() {
         var yearHeight = $('#strand-' + strand).height() / gYearL;
         var yVal = yearHeight * (y1 - gYearS);
         $.each(events[strand], function(i, oe) {
-            var eh = oe.innerHeight();
+            var eh = oe.outerHeight(true);
             var oy = oe.position().top;
-            if (inBounds(yVal, oy, oy + 65))
-                yVal = oy + 65;
+            if (strand === 'cult') {
+            console.log(yVal);
+            console.log(oy);
+            console.log(oy + eh);
+            }
+            if (inBounds(yVal, oy, oy + eh))
+                yVal = oy + eh;
         });
-        
+        console.log(yVal);
+        console.log('-');
         event.css('top', yVal + 'px');
         event.css('z-index', 4000 - id);
         event.attr('data-zind', 4000 - id);
@@ -139,13 +143,18 @@ $(document).ready(function() {
         var tlSubtitle = $('<small>');
         tlSubtitle.text(data.subtitle);
         tlTitle.append(tlSubtitle);
+        
         gYearS = data.startYear;
         gYearL = data.endYear - data.startYear;
         gYearE = data.endYear;
         themes = data.themes;
+        
+        $('#strands').children().height(data.tlHeight);
+        
         procStrand('pol', data.strands.pol);
         procStrand('econ', data.strands.econ);
         procStrand('cult', data.strands.cult);
+        
         setupCollapse();
     };
     

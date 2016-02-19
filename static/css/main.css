@@ -63,7 +63,7 @@ a, a:hover, a:active, a:visited {
 
 #strand-pol, #strand-econ, #strand-cult {
     position: relative;
-    height: 4000px;
+    height: 420px;
     padding: 0;
     margin-bottom: 0;
 }
@@ -120,16 +120,6 @@ a, a:hover, a:active, a:visited {
 .theme-icon {
     font-size: 21px;
     color: #424242;
-}
-
-.ec-button {
-    font-size: 32px;
-    color: #212121;
-    transition: transform 0.6s;
-}
-
-a[aria-expanded=true] > .ec-button {
-    transform: rotateZ(180deg);
 }
 
 .event-desc {
