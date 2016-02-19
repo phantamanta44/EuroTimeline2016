@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #212121;
     margin-bottom: 16px;
+    background-color: #F4F4F4;
 }
 
 a, a:hover, a:active, a:visited {
@@ -17,21 +18,23 @@ a, a:hover, a:active, a:visited {
 /* HEADER */
 
 #header {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 /* BODY */
 
 #strand-container {
-    padding: 0 15px;
+    padding: 17px 31px;
+    border-radius: 6px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 16px 0 #323232;
+    box-shadow: 0 2px 16px 0 #424242;
+    background-color: #FFF;
 }
 
 #strand-header {
     position: relative;
     z-index: 4;
-    box-shadow: 0 2px 7px 2px #6A6A6A;
+    box-shadow: 0 3px 7px 0 #727272;
 }
 
 #strand-header > div > h3 {
