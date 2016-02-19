@@ -32,6 +32,35 @@ $(document).ready(function() {
         eventJqs.mouseleave(themeUpdateFunc);
     };
     
+    var showOnly = function(tag) {
+        $('.strand-event').removeClass('event-unfocus');
+        $('.filter-tag').remove();
+        $('.strand-event').filter(function(i, element) {
+            return !$(element).hasClass('event-theme-' + tag);
+        }).addClass('event-unfocus');
+        var theTh = themes[tag];
+        var tagElem = $('<div>', {class: 'filter-tag'});
+        var tagElemIcon = $('<i>', {class: 'mdi'});
+        var tagElemCapt = theTh.name;
+        tagElemIcon.addClass(theTh.icon);
+        tagElem.append(tagElemIcon);
+        tagElem.append(tagElemCapt);
+        tagElem.hide().appendTo($(body)).fadeIn(400);
+        tagElem.click(function() {
+            $('.strand-event').removeClass('event-unfocus');
+            tagElem.fadeOut(400, function() {
+                tagElem.remove();
+            });
+        });
+    };
+    
+    var tooltip = function(e, tId) {
+        e.tooltip();
+        e.click(function() {
+            showOnly(tId);
+        });
+    };
+    
     var inBounds = function(n, lower, upper) {
         return n >= lower && n < upper;
     };
@@ -64,7 +93,7 @@ $(document).ready(function() {
             title: theme.name
         });
         themeIcon.addClass(theme.icon);
-        themeIcon.tooltip();
+        tooltip(themeIcon, themeId);
         themeDiv.append(themeIcon);
         heading.append(themeDiv);
         

@@ -92,7 +92,7 @@ a, a:hover, a:active, a:visited {
     width: 100%;
     padding: 3px 15px;
     box-shadow: 0 3px 8px -4px #646464;
-    transition: background-color 0.8s;
+    transition: background-color 0.8s, opacity 0.8s;
 }
 
 .strand-event > .panel-collapse > .panel-body {
@@ -127,10 +127,35 @@ a, a:hover, a:active, a:visited {
 .theme-icon {
     font-size: 21px;
     color: #424242;
+    cursor: pointer;
 }
 
 .event-desc {
     margin: 0;
+}
+
+.event-unfocus {
+    opacity: 0.2;
+}
+
+.filter-tag {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    background-color: #E6E6E6;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.6s, box-shadow 0.6s;
+    box-shadow: 0 1px 4px 0 #888;
+}
+
+.filter-tag:hover {
+    background-color: #EAEAEA;
+    box-shadow: 0 1px 8px 0 #AAA;
+}
+
+.filter-tag > i {
+    margin-right: 6px;
 }
 
 /* FOOTER */
