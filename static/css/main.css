@@ -134,7 +134,7 @@ a, a:hover, a:active, a:visited {
     margin: 0;
 }
 
-.event-unfocus {
+.event-unfocus:not(.strand-event-expanded) {
     opacity: 0.2;
 }
 

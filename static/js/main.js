@@ -9,9 +9,11 @@ $(document).ready(function() {
                     if (obj.parent().attr('aria-expanded') === 'true') {
                         transformicons.transform(element);
                         ppppDiv.css('z-index', 8000);
+                        ppppDiv.addClass('strand-event-expanded');
                     } else {
                         transformicons.revert(element);
                         ppppDiv.css('z-index', ppppDiv.attr('data-zind'));
+                        ppppDiv.removeClass('strand-event-expanded');
                     }
                 });
             }, 1);
